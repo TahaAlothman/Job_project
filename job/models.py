@@ -27,8 +27,8 @@ class Job_Overview(models.Model):
     Posted_date = models.DateTimeField()
     locetion = models.CharField(max_length=50)
     Vacancy = models.IntegerField()
-    job_natur = models.ForeignKey(Job,related_name='job_time',on_delete=models.CASCADE)
-    salary = models.CharField(max_length=100)
+    job_natur =  models.CharField(max_length=15,choices=Job_Type_Choices)
+    salary_year = models.CharField(max_length=100)
     Application_date = models.CharField(max_length=100)
 
 class Company(models.Model):
