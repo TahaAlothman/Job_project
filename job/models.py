@@ -19,6 +19,8 @@ class Job (models.Model):
     company = models.ForeignKey('Company',related_name='job_company',on_delete=models.CASCADE)
     job_Art = models.ForeignKey('Category',related_name='category_job',on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
 
 
 
@@ -31,13 +33,18 @@ class Job_Overview(models.Model):
     salary_year = models.CharField(max_length=100)
     Application_date = models.CharField(max_length=100)
 
+    
+
+    
+
 class Company(models.Model):
     name = models.CharField(max_length=50)
     subtitle = models.TextField(max_length=1000)
     web_site = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
 
-
+    def __str__(self):
+        return self.name
 
 class Category (models.Model):
     logo =  models.ImageField(upload_to='logo')
@@ -50,4 +57,5 @@ class Category (models.Model):
     Experience = models.CharField(max_length=100,choices=Experience_Choices)
     Posted_Within = models.CharField(max_length=100,choices=PostedTime_Choices)
 
-
+    def __str__(self):
+        return self.name
