@@ -6,7 +6,7 @@ from .models import Job
 @api_view(['GET'])
 def job_list_api(request):
    jobs = Job.objects.all()
-   data = JobSerializer(jobs,many=True).data   #json
+   ##data = JobSerializer(jobs,many=True).data   #json
    data = JobSerializer(jobs,many=True,context={'request':request}).data   #json
    return Response({'jobs':data})
 
