@@ -4,8 +4,6 @@ from django.db import models
 
 Category_CHOICES = (('All Category','All Category'),('Category 1','Category 1'),('Category 2','Category 2'),('Category 3','Category 3'),('Category 4','Category 4') )
 Job_Type_Choices=(('Full Time','Full Time'),('Part Time','Part Time'),('Remote','Remote'),('Freelance','Freelance'))
-Experience_Choices = (('1-2 Years','1-2 Years'),('2-3 Years','2-3 Years'),('3-6 Years','3-6 Years'),('6-more','6-more'))
-PostedTime_Choices = (('Any','Any'),('Today','Today'),('Last 2 days','Last 2 days'),('Last 3 days','Last 3 days'),('Last 5 days','Last 5 days'),('Last 10 days','Last 10 days'))
 class Job (models.Model):  #api list detail update create
     name = models.CharField(max_length=120)
     image = models.ImageField(upload_to='job')
@@ -16,7 +14,7 @@ class Job (models.Model):  #api list detail update create
     
     Experience = models.TextField(max_length=10000)
     company = models.ForeignKey('Company',related_name='job_company',on_delete=models.CASCADE)
-    job_Art = models.ForeignKey('Category',related_name='category_job',on_delete=models.CASCADE)
+    job_natur= models.CharField(max_length=100,choices=Job_Type_Choices)
     Vacancy = models.IntegerField()
     salary_year = models.CharField(max_length=100)
    
