@@ -18,13 +18,13 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from job.api import job_list_api,job_detail_api
+from job.api import JobListAPI,JobDetailAPI
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('api-auth/', include('rest_framework.urls')),
      path('summernote/', include('django_summernote.urls')),
-     path('api/list',job_list_api),
-     path('api/list/<int:job_id>',job_detail_api),
+     path('api/list', JobListAPI.as_view()),
+     path('api/list/<int:pk>',JobDetailAPI.as_view()),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

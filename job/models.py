@@ -16,7 +16,7 @@ class Job (models.Model):  #api list detail update create
     company = models.ForeignKey('Company',related_name='job_company',on_delete=models.CASCADE)
     job_natur= models.CharField(max_length=100,choices=Job_Type_Choices)
     Vacancy = models.IntegerField()
-    
+  
     def __str__(self):
         return self.name
 
