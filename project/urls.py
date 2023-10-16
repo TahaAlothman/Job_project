@@ -22,6 +22,7 @@ from job.api import job_list_api,job_detail_api
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('api-auth/', include('rest_framework.urls')),
+     path('summernote/', include('django_summernote.urls')),
      path('api/list',job_list_api),
      path('api/list/<int:job_id>',job_detail_api),
 ]
