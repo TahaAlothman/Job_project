@@ -57,12 +57,3 @@ Explain how to use the project and its features. Provide examples or code snippe
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-Mention any resources, tutorials, or other references that were helpful in creating this project.
-
-That's a general structure for a README file in a Django project. You can customize it based on your specific project requirements and add more details as needed.
