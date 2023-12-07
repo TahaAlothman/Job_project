@@ -49,11 +49,4 @@ git clone https://github.com/TahaAlothman/Job_project.git
 
 6. Open your web browser and access the project at [http://localhost:8000](http://localhost:8000).
 
-## Usage
-
-Explain how to use the project and its features. Provide examples or code snippets if necessary.
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
