@@ -1,0 +1,21 @@
+version: '3.8' # the version compose with version docker
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      
+  djangoserver:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000 # um lockal docker mit lockal im gerät zuverbinden
+    ports:
+      - "8000:8000"
+    container_name: Backend
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
