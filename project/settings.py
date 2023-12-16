@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_summernote',
+    'drf_yasg',
     
 
     # my apps
