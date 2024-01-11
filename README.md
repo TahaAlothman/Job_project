@@ -30,7 +30,7 @@ git clone https://github.com/TahaAlothman/Job_project.git
 2. Change to the project directory:
 
  
-   cd Job_project`
+  `cd Job_project ` 
 
 3. Install the dependencies:
 
