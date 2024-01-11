@@ -30,22 +30,22 @@ git clone https://github.com/TahaAlothman/Job_project.git
 2. Change to the project directory:
 
  
-  `cd Job_project ` 
+    `cd Job_project ` 
 
 3. Install the dependencies:
 
 
-   pip install -r requirements.txt
+   ` pip install -r requirements.txt`
 
 4. Run database migrations:
 
  
-   python manage.py migrate
+   ` python manage.py migrate`
 
 5. Start the development server:
 
 
-   python manage.py runserver
+   `python manage.py runserver`
 
 6. Open your web browser and access the project at [http://localhost:8000](http://localhost:8000).
 
